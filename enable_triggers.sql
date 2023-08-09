@@ -10,7 +10,7 @@ and rdb$trigger_source not starting with 'CHECK' into :NOMTABLE
 do
 begin
 NOMTABLE=trim(NOMTABLE);
-req1= 'ALTER TRIGGER ' || :NOMTABLE || ' INACTIVE;';
+req1= 'ALTER TRIGGER "' || :NOMTABLE || '" ACTIVE;';
 execute statement req1;
 end
 END^
